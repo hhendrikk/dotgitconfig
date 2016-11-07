@@ -1,6 +1,6 @@
 [user]
-	name = Name
-	email = Email
+    name = Name
+    email = Email
 [core]
     editor = gvim -f
 [alias]
@@ -10,4 +10,5 @@
     bc = branch -avv
     st = status
     cr = cherry-pick
+    mgnoff = merge --no-ff
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit"
