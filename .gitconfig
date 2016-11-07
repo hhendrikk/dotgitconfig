@@ -1,0 +1,13 @@
+[user]
+	name = Name
+	email = Email
+[core]
+    editor = gvim -f
+[alias]
+    ck = checkout
+    pullo = pull --ff-only
+    pullr = pull rebase
+    bc = branch -avv
+    st = status
+    cr = cherry-pick
+    lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit"
