@@ -2,9 +2,36 @@
     name = Name
     email = Email
 [core]
-    editor = gvim -f
+    autocrlf = true 
+    editor = gvim -f 
+[merge]
+    tool = kdiff3
+	conflictstyle = diff3
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
 [alias]
     ck = checkout
+    ckb = checkout -b
     pullo = pull --ff-only
     pullr = pull --rebase
     bc = branch -avv
@@ -12,3 +39,10 @@
     cr = cherry-pick
     mgnoff = merge --no-ff
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit"
+
+[credential]
+    helper = manager
+[mergetool]
+    keepBackup = false
+[mergetool "kdiff3"]
+	cmd = kdiff3 $BASE $LOCAL $REMOTE -o $MERGED
