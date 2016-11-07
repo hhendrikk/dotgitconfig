@@ -6,7 +6,7 @@
 [alias]
     ck = checkout
     pullo = pull --ff-only
-    pullr = pull rebase
+    pullr = pull --rebase
     bc = branch -avv
     st = status
     cr = cherry-pick
