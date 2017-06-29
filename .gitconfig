@@ -2,8 +2,8 @@
     name = Name
     email = Email
 [core]
-    autocrlf = true 
-    editor = gvim -f 
+    autocrlf = false 
+    editor = vim -f 
 [merge]
     tool = kdiff3
     conflictstyle = diff3
