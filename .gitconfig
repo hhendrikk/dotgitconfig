@@ -40,9 +40,6 @@
     mgnoff = merge --no-ff
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit"
     lg1 = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit" -10
-
-[credential]
-    helper = manager
 [mergetool]
     keepBackup = false
 [mergetool "kdiff3"]
