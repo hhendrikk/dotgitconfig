@@ -2,7 +2,7 @@
     name = Name
     email = Email
 [core]
-    autocrlf = false 
+    autocrlf = input 
     editor = vim -f 
 [merge]
     tool = kdiff3
