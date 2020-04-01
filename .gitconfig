@@ -1,12 +1,8 @@
 [user]
-    name = Name
-    email = Email
+    name = <Name>
+    email = <Email>
 [core]
-    autocrlf = input 
-    editor = vim -f 
-[merge]
-    tool = kdiff3
-    conflictstyle = diff3
+    editor = nvim -f
 
 [color]
     branch = auto
@@ -30,6 +26,7 @@
     untracked = cyan
 
 [alias]
+    c = commit -m "updated"
     ci = commit
     ck = checkout
     ckb = checkout -b
@@ -45,7 +42,11 @@
     lg2 = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit" -20
     lg5 = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an %Creset%C(cyan)(%ar)%C(bold blue)>%Creset' --abbrev-commit" -50
 
+[mergetool "nvim"]
+    cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+
+[merge]
+    tool = nvim
+
 [mergetool]
-    keepBackup = false
-[mergetool "kdiff3"]
-    cmd = kdiff3 $BASE $LOCAL $REMOTE -o $MERGED
+    prompt = false
